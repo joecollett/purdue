@@ -1,0 +1,37 @@
+a {
+    color: $primary-color;
+}
+hr {
+    height: 1px;
+    color: #ddd;
+    background-color: #ddd;
+    border: none;    
+}
+img {
+    &.responsive {
+        max-width: 100%;
+        height: auto;
+    }    
+    &.full-responsive {
+        width:100%;
+        height:auto;
+    }
+}
+.pointer {
+    cursor: pointer;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+@each $name, $weight in $font-weights {
+    .font-weight-#{$name} {
+        font-weight:$weight;
+    }
+}
+.text-left {
+    text-align:left !important;
+}
+.pull-right {
+    float:right !important;
+}

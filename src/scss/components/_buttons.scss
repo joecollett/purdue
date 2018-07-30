@@ -1,0 +1,35 @@
+.button-primary {
+    padding: 7px 15px;
+    font-size: 16px;
+    font-family: Vollkorn;
+    border: 1px solid #bbbbbb;
+    background: #d7d7d7; 
+    background: -moz-linear-gradient(top, #d7d7d7 0%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #d7d7d7 0%,#ffffff 100%); 
+    background: linear-gradient(to bottom, #d7d7d7 0%,#ffffff 100%); 
+    cursor: pointer;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7d7d7', endColorstr='#ffffff',GradientType=0 );    
+}
+.button-secondary {
+    padding: 18px 22px;
+    font-size: 16px;
+    border: 1px solid #bbbbbb;
+    background: #846101; 
+    background: -moz-linear-gradient(top, #846101 0%, #b28200 100%); 
+    background: -webkit-linear-gradient(top, #846101 0%,#b28200 100%); 
+    background: linear-gradient(to bottom, #846101 0%,#b28200 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#846101', endColorstr='#b28200',GradientType=0 );
+    align-self: flex-start;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    border-radius: 30px;
+    border-bottom: 4px solid #4d3801;    
+    cursor: pointer;
+    &:disabled {
+        background: #846101; 
+        opacity: 0.5 !important;      
+        color:#fff !important;  
+    }    
+}

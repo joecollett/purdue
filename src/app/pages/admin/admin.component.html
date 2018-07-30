@@ -1,0 +1,18 @@
+<div class="login margin-left-md-md  margin-right-md" *ngIf="data">
+  <h2 class="padding-bottom-md padding-top-md">Admin Login</h2>
+  <form (ngSubmit)="login(form)" #adminLogin="ngForm">
+    <div class="input-group margin-top-md">
+        <label for="un">Username</label>
+        <input type="text" id="username" [(ngModel)]="form.un" name="un">
+    </div>
+    <div class="input-group margin-top-md">
+        <label for="pw">Password</label>
+        <input type="password" id="password" [(ngModel)]="form.pw" name="pw">
+    </div>
+    <button class="button-primary">Login</button>
+  </form>
+</div>
+
+<pre>
+  {{form | json}}
+</pre>

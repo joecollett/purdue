@@ -1,0 +1,26 @@
+<div class="login margin-left-md-md  margin-right-md" *ngIf="data">
+  <h2 class="padding-bottom-md padding-top-md">Login</h2>
+  <form (ngSubmit)="login(form)" #userLogin="ngForm">
+    <div class="input-group margin-top-md">
+        <label for="un">Username</label>
+        <input type="text" id="username" [(ngModel)]="form.un" name="un">
+    </div>
+    <div class="input-group margin-top-md">
+        <label for="pw">Password</label>
+        <input type="password" id="password" [(ngModel)]="form.pw" name="pw">
+    </div>
+    <div class="d-flex d-justify-content">
+      <a href="">Forgotten Password</a>
+      <button class="button-primary">Login</button>
+    </div>    
+  </form>
+  <hr class="margin-top-md margin-bottom-md">
+  <div class="d-flex d-justify-content">
+    <p class="margin-top-none margin-bottom-md">Or login with</p>
+    <a href="">Create account</a>
+  </div>
+  <div class="d-flex">
+      <i class="fab fa-linkedin fa-2x margin-right-sm" style="color:#3176b0"></i>
+      <i class="fab fa-facebook fa-2x" style="color:#4267b2"></i>
+  </div>
+</div>

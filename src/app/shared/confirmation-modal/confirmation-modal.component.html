@@ -1,0 +1,6 @@
+<h1 class="mat-dialog-title" mat-dialog-title="" id="mat-dialog-title-1">Confirmation</h1>
+<p>{{data.text}}</p>
+<div class="d-flex d-flex-direction-row-reverse margin-top-lg">
+    <button mat-raised-button color="submit" class="margin-left-md" mat-primary (click)="dialogRef.close(true)">Confirm</button>
+    <button mat-raised-button (click)="dialogRef.close(false)">Cancel</button>
+</div>

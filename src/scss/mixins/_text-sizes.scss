@@ -1,0 +1,42 @@
+@function strip-px($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+	  @return $number / ($number * 0 + 1);
+	}  
+	@return $number;
+}
+
+@mixin textSizes($numbers, $baseSize, $font-size, $class, $screen-size){
+	@each $item in $numbers {
+		$baseSizeStripped: strip-px($baseSize) * strip-px($font-size);
+		$font-size-pixels: $baseSizeStripped + $item;
+
+		@if $screen-size != "" {
+			.#{$class}-#{$item}x-#{$screen-size} {
+				font-size: $font-size-pixels * 1px !important;
+				font-size: ($font-size-pixels / strip-px($baseSize)) * 1rem !important;
+			}
+		} @else {
+			.#{$class}-#{$item}x {
+				font-size: $font-size-pixels * 1px !important;
+				font-size: ($font-size-pixels / strip-px($baseSize)) * 1rem !important;
+			}
+		}
+	}
+}
+
+@mixin smallerTextsizes($numbers, $baseSize, $font-size, $class, $screen-size){
+	@each $item, $value in $smaller-font-sizes {
+		$font-size-pixels: strip-px($baseSize) * $value;
+		@if $screen-size != "" {
+			.smaller-#{$class}-#{$item}x-#{$screen-size} {
+				font-size: $font-size-pixels * 1px !important;
+				font-size: ($font-size-pixels / strip-px($baseSize)) * 1rem !important;
+			}
+		} @else {
+			.smaller-#{$class}-#{$item}x {
+				font-size: $font-size-pixels * 1px;
+				font-size: ($font-size-pixels / strip-px($baseSize)) * 1rem !important;
+			}
+		}
+	}
+}

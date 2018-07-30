@@ -1,0 +1,16 @@
+<div  class="margin-top-xl" fxLayout="row" fxLayout.sm="column-reverse" fxLayout.xs="column-reverse" >
+    <div fxFlex="40" class="bg-grey d-flex d-flex-direction-column" style="position:relative;">
+        <div *ngFor="let story of stories; let i = index" style="position:relative" [class.active]="story?.title==featured.title" (click)="updateCount(i)" class="d-flex-1 padding-left-lg padding-right-lg d-flex d-flex-direction-column d-justify-content-center pointer">
+          <div>
+              <h3>{{story?.title}}</h3>
+              <p>{{story?.Ctime | date:'mediumDate'}}</p> 
+          </div>
+           <div class="triangle">
+              <div></div>
+              <div></div>
+              <div></div>
+           </div>
+        </div>
+    </div>
+    <app-featured [featured]="featured" [@fadeInAnimation]="state" fxFlex="60"></app-featured>
+</div>

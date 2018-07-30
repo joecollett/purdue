@@ -1,0 +1,58 @@
+{
+    "categories": [
+      {
+        "name": "Communities",
+        "desc": "Headline for a Clubs Event or Story Can Go Here",
+        "img": "https://purdue.imodules.com/s/1461/images/gid1001/editor/pageheaders/becomemember.jpg",
+        "color": "#849E2A"
+      },
+      {
+        "name": "Proffessional Development",
+        "desc": "Headline for a Clubs Event or Story Can Go Here",
+        "img": "https://purdue.imodules.com/s/1461/images/gid1001/editor/TravelWeb_B.jpg",
+        "color": "#B46012"
+      },
+      {
+        "name": "Events",
+        "desc": "Headline for a Clubs Event or Story Can Go Here",
+        "img": "https://purdue.imodules.com/s/1461/images/gid1001/editor/original/globalmembership-01.png",
+        "color": "#5B6870"
+      }      
+    ],
+  "title": {
+    "heading": "Big Membership Idea",
+    "details": "Proin at tristique libero, sit amet pretium lacus. Integer consequat, turpis eget faucibus tempor, sem elit aliquet quam, in congue quam ligula a arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec lacinia sit amet neque nec scelerisque. Donec faucibus sapien eu nibh condimentum, vitae volutpat dui finibus.",
+    "buttonText": "Become a member",
+    "buttonLink": "#"
+  },
+  "stories": [
+      {
+        "title": "Joseph's Story Title Goes Here and Could Even be a Little Longer",
+        "date": "April 25, 2018",
+        "name": "Joseph",
+        "image": "http://lottimpacttrophy.org/wp-content/uploads/2014/10/9-JOSEPH.jpg",
+        "url": "#"
+      },
+      {
+        "title": "Lori's Story Title Goes Here",
+        "date": "May 23, 2018",
+        "name": "Lori",
+        "image": "https://peopledotcom.files.wordpress.com/2016/08/lori-loughlin-1024.jpg",
+        "url": "#"
+      },
+      {
+        "title": "Henry's Story Title Goes Here and Could Even be a Little Longer",
+        "date": "May 29, 2018",
+        "name": "Henry",
+        "image": "https://cdn.images.express.co.uk/img/dynamic/67/590x/Thierry-Henry-has-denied-he-had-anything-to-do-with-Alexis-Sanchez-leaving-Arsenal-909007.jpg",
+        "url": "#"
+      },
+      {
+        "title": "Sarah's Story Title Goes Here and Could Even be a Little Longer",
+        "date": "June 8, 2018",
+        "name": "Sarah",
+        "image": "https://cdn1.thr.com/sites/default/files/imagecache/scale_crop_768_433/2016/07/oitnb_lolly_1_still_h_2016.jpg",
+        "url": "#"
+      }
+    ]      
+}

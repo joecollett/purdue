@@ -1,0 +1,32 @@
+@each $name, $value in $sizes {    
+    @each $position in $positions {
+        .margin-#{$position}-#{$name} {
+            margin-#{$position}: $value !important;
+        }  
+        .padding-#{$position}-#{$name} {
+            padding-#{$position}: $value !important;
+        }     
+        @each $breakpoint, $breakpoint-size in $breakpoints {
+            @media(min-width: $breakpoint-size){
+                .margin-#{$position}-#{$name}-#{$breakpoint} {
+                    margin-#{$position}: $value !important ;
+                } 
+                .padding-#{$position}-#{$name}-#{$breakpoint} {
+                    padding-#{$position}: $value !important;
+                }      
+                .hidden-#{$breakpoint} {
+                    display: none !important;
+                }    
+                .visible-#{$breakpoint} {
+                    display: block !important;
+                }                                            
+            }
+        }
+    }
+    .margin-#{$name} {
+        margin: $value !important;
+    }
+    .padding-#{$name} {
+        padding: $value !important;
+    }         
+}

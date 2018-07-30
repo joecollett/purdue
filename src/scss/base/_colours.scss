@@ -1,0 +1,33 @@
+.text-white {
+    color:#fff;
+}
+.bg-grey {
+    background: #e5e5e5;  
+}
+.bg-danger {
+    background: $danger-background-color;
+    color: $danger-color;
+}
+
+/*** ANGULAR MATERIAL COLOURS ***/
+
+.mat-default {
+    background-color: $default-background;
+    color: $default-color;
+}
+.mat-submit {
+    color:#fff;
+    background: #846101; 
+    background: -moz-linear-gradient(top, #846101 0%, #b28200 100%); 
+    background: -webkit-linear-gradient(top, #846101 0%,#b28200 100%); 
+    background: linear-gradient(to bottom, #846101 0%,#b28200 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#846101', endColorstr='#b28200',GradientType=0 ); 
+    &.mat-raised-button[disabled][disabled] {
+        opacity:0.5;
+        color:#fff;
+        cursor: not-allowed;
+    }
+}
+.mat-tab-group.mat-primary .mat-ink-bar {
+    background: #846101; 
+}

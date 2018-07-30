@@ -1,0 +1,8 @@
+<div class="container d-flex d-flex-direction-column" *ngIf="data">
+    <div class="margin-top-xl-md margin-top-md" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
+        <app-title [title]="data.title" fxFlex="67%"></app-title>
+        <app-login [data]="data" fxFlex="33%"></app-login>
+    </div>
+    <app-categories [categories]="data.categories"></app-categories>  
+    <app-highlighted-alumni [stories]="data.stories"></app-highlighted-alumni>
+</div>

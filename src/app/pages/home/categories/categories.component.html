@@ -1,0 +1,6 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" class="margin-top-xl">
+  <div class="text-white padding-md card-cat d-flex-1" *ngFor="let category of categories" [style.background-image]="'url(' + category?.img + ')'">
+      <h3 class="margin-bottom-none">{{category?.name}}</h3>
+      <p>{{category?.desc}}</p>
+  </div>
+</div>

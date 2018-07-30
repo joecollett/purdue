@@ -1,0 +1,9 @@
+@include textSizes($numbers, $base-size, $font-size, 'text', "");
+@include smallerTextsizes($smaller-font-sizes, $base-size, $font-size, 'text', "");
+
+@each $breakpoint, $size in $breakpoints {
+    @media(min-width: $size){
+        @include textSizes($numbers, $base-size, $font-size, 'text', $breakpoint);
+        @include smallerTextsizes($smaller-font-sizes, $base-size, $font-size, 'text', $breakpoint);
+    }
+} 

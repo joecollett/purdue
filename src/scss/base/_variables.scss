@@ -1,0 +1,84 @@
+// Breakpoints and lists
+$screen-xs: 0;
+$screen-sm: 600px;
+$screen-md: 960px;
+$screen-lg:1280px;
+$screen-xl:1920px;
+
+$sizes: (
+    none: 0px,
+    xs: 5px,
+    sm: 10px,
+    md: 15px,
+    lg:30px,
+    xl:50px,
+);
+
+$font-weights: (
+    100: 100,
+    200: 200,
+    300: 300,
+    400: 400,
+    500: 500,
+    600: 600,
+    700: 700,
+    800: 800,
+    900: 900,        
+);
+
+$numbers: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20;
+
+$positions: 'top', 'bottom', 'right', 'left';
+
+$smaller-font-sizes: (
+    1: 0.9,
+    2: 0.8,
+    3: 0.7,
+    4: 0.6,
+    5: 0.5,
+);
+
+$breakpoints: (
+    xs:$screen-xs,
+    sm: $screen-sm,
+    md: $screen-md,
+    lg:$screen-lg,
+    xl:$screen-xl,
+);
+
+// Fonts
+$primary-font: Barlow;
+$secondary-font: Vollkorn;
+$base-size:16px;
+$font-size:1rem;
+
+// Spacing
+$container-padding-mobile: 0 15px;
+$container-padding: 0 50px;
+$content-padding-mobile: 0 15px;
+$content-padding: 0 50px;
+
+// Colours
+$main-background:#fff;
+$border-color:#ddd;
+
+$primary-color: #B1810B;
+$secondary-color: #000;
+
+$default-color: #333;
+$default-background: #ddd;
+
+$danger-background-color:#EF5350;
+$danger-color: #fff;
+
+// Input
+$input-color:#bcbcbc;
+$input-border-radius:0px;
+
+// Cards
+
+$card-cat-colour-1: #849e2a;
+$card-cat-colour-2: #b46012;
+$card-cat-colour-3: #5b6870;
+$card-cat-colour-4: $primary-color;
+$card-cat-colour-5: #29a592;

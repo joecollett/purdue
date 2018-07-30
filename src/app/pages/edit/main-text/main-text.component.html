@@ -1,0 +1,34 @@
+<mat-card>
+  <h2 class="margin-top-md margin-bottom-lg">Title</h2>
+  <h3>Edit Title</h3>
+  <form *ngIf="main" class="example-form" (ngSubmit)="onSubmit()" #editMainForm="ngForm" novalidate>
+    <div *ngIf="editMainForm.form.controls.heading?.invalid && (editMainForm.form.controls.heading?.dirty || editMainForm.form.controls.heading?.touched)" class="alert alert-danger">
+      <p *ngIf="editMainForm.controls.heading?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Heading is required</p>
+    </div>        
+    <mat-form-field>
+      <input matInput placeholder="Main Heading" required id="heading" [(ngModel)]="edit.heading" name="heading" #heading="ngModel">
+    </mat-form-field>
+    <div *ngIf="editMainForm.form.controls.details?.invalid && (editMainForm.form.controls.details?.dirty || editMainForm.form.controls.details?.touched)" class="alert alert-danger">
+      <p *ngIf="editMainForm.controls.details?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Details is required</p>
+    </div>         
+    <mat-form-field>
+      <textarea matInput placeholder="Main details" required [(ngModel)]="edit.details" name="details"></textarea>
+    </mat-form-field>
+    <div *ngIf="editMainForm.form.controls.buttonText?.invalid && (editMainForm.form.controls.buttonText?.dirty || editMainForm.form.controls.buttonText?.touched)" class="alert alert-danger">
+      <p *ngIf="editMainForm.controls.buttonText?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Button text is required</p>
+    </div>         
+    <mat-form-field>
+      <input matInput placeholder="Main button" required [(ngModel)]="edit.buttonText" name="buttonText">
+    </mat-form-field>  
+    <div *ngIf="editMainForm.form.controls.buttonLink?.invalid && (editMainForm.form.controls.buttonLink?.dirty || editMainForm.form.controls.buttonLink?.touched)" class="alert alert-danger">
+        <p *ngIf="editMainForm.controls.buttonLink?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Button text is required</p>
+      </div>       
+    <mat-form-field>
+      <input matInput placeholder="Main button link" required [(ngModel)]="edit.buttonLink" name="buttonLink">
+    </mat-form-field> 
+    <div class="d-flex d-flex-direction-row-reverse margin-top-md">
+      <button mat-raised-button color="submit" class="margin-left-md" [disabled]="!editMainForm.valid">Save Changes</button>
+      <button mat-raised-button type="button" (click)="reset()">Reset</button>
+    </div>  
+  </form>
+</mat-card>

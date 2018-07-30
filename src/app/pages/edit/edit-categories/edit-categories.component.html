@@ -1,0 +1,88 @@
+<mat-card>
+
+  <div class="d-flex margin-top-md margin-bottom-md d-justify-content-space-between">
+      <h2>Categories</h2>
+      <button mat-raised-button color="submit" (click)="toggleAddView()">Add New</button>
+  </div>
+
+  <form *ngIf="toggle == true;" action="">
+    <h3>Add new category</h3>
+    <mat-card>
+      <form (ngSubmit)="addCat(i)" #addCatForm="ngForm">
+        <div *ngIf="addCatForm.form.controls.addName?.invalid && (addCatForm.form.controls.addName?.dirty || addCatForm.form.controls.addName?.touched)">
+          <p *ngIf="addCatForm.controls.addName?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Name is required</p>
+        </div>             
+        <mat-form-field>
+          <input matInput placeholder="Name" required [(ngModel)]="add.name" name="addName" #addName="ngModel" required>
+        </mat-form-field>
+        <div *ngIf="addCatForm.form.controls.addDesc?.invalid && (addCatForm.form.controls.addDesc?.dirty || addCatForm.form.controls.addDesc?.touched)">
+          <p *ngIf="addCatForm.controls.addDesc?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Description is required</p>
+        </div>          
+        <mat-form-field>
+          <input matInput placeholder="Description" required [(ngModel)]="add.desc" name="addDesc">
+        </mat-form-field>   
+        <div *ngIf="addCatForm.form.controls.addImg?.invalid && (addCatForm.form.controls.addImg?.dirty || addCatForm.form.controls.addImg?.touched)">
+          <p *ngIf="addCatForm.controls.addImg?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Image is required</p>
+        </div>            
+        <mat-form-field>
+          <input matInput placeholder="Image" required [(ngModel)]="add.img" name="addImg">
+        </mat-form-field>   
+        <div *ngIf="addCatForm.form.controls.addColor?.invalid && (addCatForm.form.controls.addColor?.dirty || addCatForm.form.controls.addColor?.touched)">
+          <p *ngIf="addCatForm.controls.addColor?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Colour is required</p>
+        </div>            
+        <mat-form-field>
+          <input matInput placeholder="Colour" required [(ngModel)]="add.color" name="addColor">
+        </mat-form-field>
+        <div class="d-flex d-flex-direction-row-reverse margin-top-md">
+          <button mat-raised-button color="submit" class="margin-left-md" type="submit" [disabled]="!addCatForm.valid">Save Changes</button>
+          <button mat-raised-button type="button" (click)="cancel(i)">Cancel</button>
+        </div>
+      </form>         
+    </mat-card>
+  </form>
+  
+  <mat-accordion *ngIf="categories">
+    <h3>Edit categories</h3>
+    <mat-expansion-panel *ngFor="let cat of categories.categories; let i = index;">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong>{{cat?.name}}</strong>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <form (ngSubmit)="onSubmit(i)" #editCatForm="ngForm">
+        <div *ngIf="editCatForm.form.controls.name?.invalid && (editCatForm.form.controls.name?.dirty || editCatForm.form.controls.name?.touched)">
+          <p *ngIf="editCatForm.controls.name?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Name is required</p>
+        </div>           
+        <mat-form-field>
+          <input matInput placeholder="Name" required [(ngModel)]="model[i].name" name="name">
+        </mat-form-field>
+        <div *ngIf="editCatForm.form.controls.desc?.invalid && (editCatForm.form.controls.desc?.dirty || editCatForm.form.controls.desc?.touched)">
+          <p *ngIf="editCatForm.controls.desc?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Description is required</p>
+        </div>           
+        <mat-form-field>
+          <input matInput placeholder="Description" required [(ngModel)]="model[i].desc" name="desc">
+        </mat-form-field>   
+        <div *ngIf="editCatForm.form.controls.image?.invalid && (editCatForm.form.controls.image?.dirty || editCatForm.form.controls.image?.touched)">
+          <p *ngIf="editCatForm.controls.image?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Image is required</p>
+        </div>           
+        <mat-form-field>
+          <input matInput placeholder="Image" required [(ngModel)]="model[i].img" name="image">
+        </mat-form-field>  
+        <div *ngIf="editCatForm.form.controls.color?.invalid && (editCatForm.form.controls.color?.dirty || editCatForm.form.controls.color?.touched)">
+          <p *ngIf="editCatForm.controls.color?.errors.required" class="bg-danger margin-bottom-sm padding-sm">Colour is required</p>
+        </div>          
+        <mat-form-field>
+          <input matInput placeholder="Colour" required [(ngModel)]="model[i].color" name="color">
+        </mat-form-field>
+        <div class="d-flex d-flex-direction-row-reverse margin-top-md">
+          <button mat-raised-button color="submit" class="margin-left-md" type="submit" [disabled]="!editCatForm.valid">Save Changes</button>
+          <button mat-raised-button color="warn" type="button" (click)="remove(model[i].ID)">Remove</button>
+          <button mat-raised-button type="button" class="margin-right-md" (click)="reset(i)">Reset</button>
+        </div>  
+      </form>      
+    </mat-expansion-panel> 
+  </mat-accordion>
+
+</mat-card>
+  
+  

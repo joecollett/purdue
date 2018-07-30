@@ -1,0 +1,13 @@
+
+  <mat-toolbar color="primary" class="d-flex d-justify-content-center">
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true" class="navigation container">
+      <app-nav-items></app-nav-items>
+    </div>
+    <div fxShow="true" fxHide.gt-sm="true">
+      <a (click)="toggle()" class="toggle-menu">
+        <i class="fas fa-bars margin-right-xs smaller-text-1x font-weight-800"></i>
+        <span class="text-white smaller-text-1x text-uppercase font-weight-800">Site Menu</span>
+      </a>
+    </div>
+  </mat-toolbar>

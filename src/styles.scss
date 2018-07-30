@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+
+// Variables
+@import "scss/base/variables";
+
+// Mixins
+@import "scss/mixins/flexbox";
+@import "scss/mixins/text-sizes";
+
+// Base
+@import "scss/base/headings";
+@import "scss/base/spacing";
+@import "scss/base/flexbox";
+@import "scss/base/colours";
+@import "scss/base/text-sizes";
+
+// Components 
+@import "scss/components/general";
+@import "scss/components/inputs";
+@import "scss/components/buttons";
+@import "scss/components/card";
+@import "scss/components/triangle";
+
+// Layout
+@import "scss/layout/main";
+@import "scss/layout/header";
+@import "scss/layout/navigation";
+@import "scss/layout/footer";
+
+// Pages
+@import "scss/pages/home";
+@import "scss/pages/edit";

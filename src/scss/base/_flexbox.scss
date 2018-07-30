@@ -1,0 +1,64 @@
+.d-flex {
+    @include flexbox()
+}
+.d-justify-content {
+    @include justify-content(space-between);
+}
+.d-justify-content-space-between {
+    @include justify-content(space-between);
+}
+.d-flex-1 {
+    @include flex(1);
+}
+.d-flex-direction-column {
+    @include flex-direction(column);
+}
+.d-justify-content-center {
+    @include justify-content(center);
+}
+.d-flex-direction-column-reverse {
+    @include flex-direction(column-reverse);
+}
+.d-flex-align-items-center {
+    align-items: center !important;
+}
+.d-flex-wrap {
+    @include flex-wrap(wrap);
+}
+.d-flex-direction-row-reverse {
+    @include flex-direction(row-reverse);
+}
+@each $breakpoint, $value in $breakpoints {
+    @media(min-width:$value){
+        .d-flex-#{$breakpoint} {
+            @include flexbox()
+        }
+        .d-justify-content-space-between-#{$breakpoint}{
+            @include justify-content(space-between);
+        }        
+        .d-justify-content-#{$breakpoint} {
+            @include justify-content(space-between);
+        }
+        .d-flex-1-#{$breakpoint} {
+            @include flex(1);
+        }
+        .d-flex-direction-column-#{$breakpoint} {
+            @include flex-direction(column);
+        }
+        .d-justify-content-center-#{$breakpoint} {
+            @include justify-content(center);
+        }
+        .d-flex-direction-column-reverse-#{$breakpoint} {
+            @include flex-direction(column-reverse);
+        }    
+        .d-flex-align-items-center-#{$breakpoint} {
+            align-items: center !important;
+        }  
+        .d-flex-wrap-#{$breakpoint} {
+            @include flex-wrap(wrap);
+        }       
+        .d-flex-direction-row-reverse {
+            @include flex-direction(row-reverse);
+        }         
+    }  
+}

@@ -7,7 +7,7 @@
         <div class="right" (window:resize)="onResize($event)" [ngClass]="{'first': navOpen == true}" #mainContent [style.width.px]="mainWidth" >
             <app-header></app-header>
             <app-navigation (openNav)="openNav($event)"></app-navigation>
-            <div class="content testdiv d-flex-md d-flex-direction-column d-flex-justify-content-center d-flex-align-items-center">
+            <div class="content testdiv joe d-flex-md d-flex-direction-column d-flex-justify-content-center d-flex-align-items-center">
                 <router-outlet></router-outlet>
             </div>
             <app-footer></app-footer>
